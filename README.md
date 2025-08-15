@@ -16,7 +16,7 @@ Sigue estos pasos para configurar y levantar el backend en tu máquina local.
 
 **1. Clonar el Repositorio**
 ```bash
-git clone [https://github.com/tu-usuario/todo-backend.git](https://github.com/tu-usuario/todo-backend.git)
+git clone [https://github.com/flusho1/todo-backend.git]
 cd todo-backend
 ```
 **2. Instalar Dependencias**
