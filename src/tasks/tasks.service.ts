@@ -16,7 +16,7 @@ export class TasksService {
     return this.tasksRepository.find();
   }
 
-  // Método corregido con async/await
+  // Changed the id parameter type from string to number
   async findOne(id: number): Promise<Task> {
     const task = await this.tasksRepository.findOne({ where: { id } });
     if (!task) {
@@ -30,12 +30,14 @@ export class TasksService {
     return this.tasksRepository.save(newTask);
   }
 
+  // Changed the id parameter type from string to number
   async update(id: number, updateTaskDto: UpdateTaskDto): Promise<Task> {
     const task = await this.findOne(id);
     Object.assign(task, updateTaskDto);
     return this.tasksRepository.save(task);
   }
 
+  // Changed the id parameter type from string to number
   async remove(id: number): Promise<void> {
     const result = await this.tasksRepository.delete(id);
     if (result.affected === 0) {
