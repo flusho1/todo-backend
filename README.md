@@ -25,7 +25,15 @@ npm install
 ```
 **3. Configurar la Base de Datos**
 - Crea una base de datos en PostgreSQL. Por ejemplo: createdb -U postgres todolist_db.
-- Abre src/app.module.ts y actualiza las credenciales de la base de datos con tu usuario, contraseña y el nombre de la base de datos que creaste.
+- En la raíz del proyecto, crea un archivo .env con tus credenciales de base de datos.
+- Ejemplo de .env:
+```bash
+DATABASE_HOST=localhost
+DATABASE_PORT=5432
+DATABASE_USERNAME=tu_usuario_de_postgre
+DATABASE_PASSWORD=tu_contraseña
+DATABASE_NAME=todolist_db
+```
 
 **4. Iniciar el Servidor**
 ```bash
